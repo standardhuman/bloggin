@@ -1,0 +1,40 @@
+The beauty of _.reduce
+
+Lets start with a quick overview of what reduce does, in terms of it's input and outputs. When I was first learning reduce, I somehow developed this notion that what reduce does is:
+    "reduce takes in an array and returns a single value. "
+
+When I read that, I imagined that reduce would intake something like: var myArray = [1, 2, 3, 4, 5]; and output something like: var singleVal = [4];
+
+Well, that's really only kinda true. A more accurate way to think about it is in terms of _.map, _.some, _.every, etc.
+
+Remember flag variables? Like:
+
+    var flag = "true";
+
+that we use in order to track the true/false state of a function that returns a boolean, such as _.every and _.some?
+
+Remeber also storage variables like:
+
+    var storage = [];
+
+that we used to push our results from _.map into?
+
+With reduce, we don't need to declare these extra variables because reduce has one built right in, often called the "accumulator", which is *nearly* the same as the startingValue, but not quite. Hang in there.
+
+THe startingValue variable can be anything. A boolean, an object, an array, basically anything for which you might use a flag, state, or storage variable.
+
+So lets say you start with startingValue as true and you want to track whether all the numbers in our input array are even.
+
+The first thing that reduce will do is to set the accumulator variable equal to whatever we want to start off with, in this case, "true". We will then write a statement that checks each number to see if it's divisible by 2 (is it even?) and, if so, do nothing, because if all the numbers are even, we simply want to return the "true" that we started out with. However, if we hit upon an odd number, then we want to change the value of the acc to "false", and immediately return (and remember, return will stop the function and kick any attached value out to the function caller) the function. So, we have
+
+if (curr % 2 === 0, ){
+  
+}
+
+
+var reduce = function(collection, callbackFunction, startingValue{
+  each(collection, function(element){
+    startingValue = callback(startingValue, element);
+  });
+return startingValue;
+});
