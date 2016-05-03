@@ -171,3 +171,5 @@ doctors = doctors.reduce(function(memo, doctor){
   return memo;
 }, []);
 console.log(JSON.stringify(doctors, null, 4));
+
+// who lotta words to make git notice
