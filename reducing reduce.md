@@ -47,21 +47,23 @@ So now what of the relationship with acc and curr? Well, on loop one, they are a
 
 From the example above:
 
-First loop:
-`initial` equals `[]`
-`acc` equals `[]`
+First loop:<br>
+`initial` equals `[]`<br>
+`acc` equals `[]`<br>
 `curr` equals `[]`
 
-Second loop:
-`acc` equals `[]`
+Second loop:<br>
+`acc` equals `[]`<br>
 `curr` equals `1`
 
-Third loop:
-`acc` equals `[1]`
+Third loop:<br>
+`acc` equals `[1]`<br>
 `curr` equals `2`
 
-Fourth loop:
-`acc` equals `[3]`
+Fourth loop:<br>
+`acc` equals `[3]`<br>
 `curr` equals `4`
 
 ...and so on.
+
+Did this help or further obfuscate? Let me know in comments!
