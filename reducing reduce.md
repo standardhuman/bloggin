@@ -2,14 +2,14 @@
 
 There was a key thing about how `.reduce` works that had eluded me. Specifically, what is the relationship between the *memo*, *current element*, and *start value* parameters? The good news is that if you more or less understand `.map`, `.filter`, `.every`, etc, you are moments away from understanding `.reduce`.
 
- Up until `.reduce`, the other functions I had learned simply as took as parameters the collection and a callback function with an element of the collection as a parameter. Now there's references to an *accumulator*, *memo*, *initial value*, *current value*, etc.
+ Up until `.reduce`, the other functions I had learned simply took as parameters the collection and a callback function with an element of the collection as a parameter. Now there's references to an *accumulator*, *memo*, *initial value*, *current value*, etc.
 
 WTF, `.reduce`?
 
 Ready? Let's get into it! We'll start by laying out the terminology you may have seen in various descriptions of `.reduce`:
 
-`memo` is the same as `accumulator`
-`current` is the same as `current element`  is the same as `element`
+`memo` is the same as `accumulator`<br>
+`current` is the same as `current element`  is the same as `element`<br>
 `starting value` is the same as `initial value` is the same as `context`
 
  and now the inner workings of `.reduce`:
