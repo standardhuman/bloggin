@@ -66,4 +66,7 @@ Fourth loop:<br>
 
 ...and so on.
 
+Watch the value changing in action:
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=var+each+%3D+function(list,+callback%29%7B%0A%09if(Array.isArray(list%29%29%7B%0A++%09for(var+i+%3D+0%3B+i+%3C+list.length%3B+i%2B%2B%29%7B%0A++%09%09callback(list%5Bi%5D,+i,+list%29%3B%0A++++%7D%0A++%7Delse%7B%0A++++for(var+key+in+list%29%7B%0A++++++callback(list%5Bkey%5D,+key,+list%29%3B%0A++++%7D%0A++%7D%0A%7D%3B%0A%0Avar+reduce+%3D+function(collection,+callback,+initial%29%7B%0A++++%09each(collection,+function(element%29%7B%0A++++++%09initial+%3D+callback(initial,+element%29%3B%0A++++++%7D%29%3B%0A++++++return+initial%3B%0A++++%7D%3B%0A%0Avar+nums+%3D+%5B1,+2,+3,+4,+5,+6%5D%3B%0A%0Avar+totalSum+%3D+reduce(nums,+function(acc,+curr%29%7B%0A++++++return+acc+%2B%3D+curr%3B%0A++++%7D,+%5B%5D%29%3B%0A%0Aconsole.log(totalSum%29%3B&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=js&rawInputLstJSON=%5B%5D&curInstr=54&codeDivWidth=350&codeDivHeight=400"> </iframe>
+
 Did this help or further obfuscate? Let me know in comments!
